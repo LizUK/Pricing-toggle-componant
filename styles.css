@@ -126,6 +126,10 @@ input:checked + .slider:before {
 	color: hsl(234, 14%, 74%);	
 }
 
+.label-info {
+	display: none;
+}
+
 /*******  *******/
 
 .container {
