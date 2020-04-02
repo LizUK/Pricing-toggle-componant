@@ -1,0 +1,296 @@
+/******* GENERAL *******/
+body {
+	
+}
+
+#wrapper {
+	width: 1440px;
+	margin: 0 auto;
+	background-color: #f6f6fe;
+	background-image: url(images/bg-bottom.svg), url(images/bg-top.svg);
+    background-position: bottom left, top right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.display-4 {
+    font-size: 2rem;
+    font-weight: 700;
+	color: hsl(233, 13%, 49%);
+	font-family: Montserrat, sans-serif;
+}
+
+p,
+li {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 0.9375rem;
+	color: hsl(233, 13%, 49%);
+}
+
+h4 {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: hsl(233, 13%, 49%);
+}
+
+
+button {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+.btn {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+}
+
+
+/******* TOGGLE SWITCH *******/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%))
+}
+
+input:checked + :hover  {
+	background: hsl(240, 100%, 90%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(237, 63%, 64%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider {
+  border-radius: 34px;
+}
+
+.slider:hover {
+	background: hsl(240, 100%, 90%);
+}
+	
+.slider:before {
+  border-radius: 50%;
+}
+
+.toggle-price p {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+	color: hsl(234, 14%, 74%);	
+}
+
+/*******  *******/
+
+.container {
+    margin-top: 40px;
+}
+
+/******* CARDS *******/
+
+.card-deck {
+    margin-right: 0; 
+    margin-left: 0; 
+}
+
+.card-deck .card {
+    margin-right: 0; 
+    margin-left: 0; 
+}
+
+.card {
+    border-radius: 1rem;
+	max-width: 400px;
+	max-height: 480px;
+	position: relative;
+    top: 40px;
+	padding-top: 20px;
+}
+
+.card.highlight {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+	min-height: 555px;
+	position: static;
+	padding-top: 60px;
+}
+
+.card.highlight p,
+.card.highlight li,
+.card.highlight h4,
+.card.highlight .card-title {
+	color: #fff;
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.card-title {
+	font-family: Montserrat, sans-serif;
+	font-weight: 700;
+	font-size: 5rem;
+	color: hsl(232, 13%, 33%);
+}
+
+.card ul li {
+	padding: 20px 0;
+	border-top: solid 1px hsl(234, 14%, 74%);
+}
+
+.card.highlight ul li {
+	border-top-color: hsl(234, 14%, 74%);
+	border-bottom-color: hsl(234, 14%, 74%);
+}
+
+.card ul li:last-child {
+	border-bottom: solid 1px hsl(234, 14%, 74%);
+}
+
+
+.btn {
+	background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	color: #fff;
+	height: 55px;
+}
+
+.card.highlight .btn {
+	background-image: none;
+	background-color: #fff;
+	color: hsl(237, 63%, 64%);
+}
+
+.btn:hover {
+    color: hsl(237, 63%, 64%);
+    background-color: #fff;
+    background-image: none;
+    text-decoration: none;
+    border: solid 1px hsl(233, 13%, 49%);
+}
+
+.card.highlight .btn:hover {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+    border-color: #fff;
+}
+
+/*******TRIGGER EFFECTS *******/
+
+.annual-price {
+	display: none;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+ 
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+
+	#wrapper {
+		background-position: bottom left, 100% 0;
+		width:100%;
+	}
+	
+	.card-title {
+    font-size: 3rem;
+}
+	
+}
+
+@media only screen and (max-width: 768px) {
+
+	#wrapper {
+		width: 100%;
+		background-position: bottom left, 500px 0;
+	}
+	
+	.container {
+		max-width: 435px!important;
+	}
+	
+	.display-4 {
+		margin-top: 60px;
+	}
+	
+	.card-deck .card {
+		-ms-flex: unset;
+		flex: unset;
+		width: 90%;
+    	margin: 0 auto;
+		display: block;
+		border-radius: 1rem;
+		max-width: 100%;
+		max-height: unset;
+		position: static;
+		padding-top: 20px;
+	}
+	
+	.card.highlight {
+    min-height: unset;
+	}
+	
+	.card-title {
+		font-size: 3.7rem;
+	
+	}
+
+}
+
+@media only screen and (max-width: 330px) {
+
+	.card-title {
+		font-size: 3rem;
+	
+	}
+
+}
+		
